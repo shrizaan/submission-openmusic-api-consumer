@@ -2,6 +2,8 @@ class Listener {
   constructor(mailSender, playlistService) {
     this._mailSender = mailSender;
     this._playlistService = playlistService;
+
+    this.listen = this.listen.bind(this);
   }
 
   async listen(message) {
@@ -21,3 +23,5 @@ class Listener {
     }
   }
 }
+
+module.exports = Listener;
